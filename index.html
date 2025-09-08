@@ -19,48 +19,31 @@
       color: #222;
     }
 
-    .container {
+    body {
       display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
       height: 100vh;
-      width: 100vw;
+      text-align: center;
     }
 
-    .sidebar {
-      background-color: #111;
-      color: #fff;
-      width: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 20px;
-      font-size: 2.5rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      gap: 1.5rem;
-      letter-spacing: 2px;
-    }
-
-    .main-content {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    ul {
+      list-style: none;
       font-size: 4rem;
       font-weight: 700;
-      color: #444;
+      letter-spacing: 0.1em;
+      color: #333;
+      text-transform: uppercase;
+      line-height: 1.8;
     }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div>tfc</div>
-      <div>oygr</div>
-      <div>uxtort</div>
-    </div>
-    <div class="main-content">
-      tfc
-    </div>
-  </div>
+  <ul>
+    <li>tfc</li>
+    <li>oygr</li>
+    <li>uxtort</li>
+  </ul>
 </body>
 </html>
