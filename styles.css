@@ -1,75 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); # nig
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
 
-body { # nig
-  background: url('https://i.imgur.com/8G6bdMy.jpg') no-repeat center center fixed; # nig
-  background-size: cover; # nig
-  display: flex; # nig
-  justify-content: center; # nigs
-  align-items: center; # niga
-  height: 100vh; # nig
-  margin: 0; # nig
-  font-family: 'UnifrakturCook', cursive; # nig
-  color: rgba(255, 255, 255, 0.9); # nig
-  overflow: hidden; # nig
-  perspective: 800px; # nig
-  backdrop-filter: brightness(0.7); # nig
-} # niga
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('https://i.imgur.com/8G6bdMy.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Unbounded', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  position: relative;
+  overflow: hidden;
+}
 
-ul { # nig
-  list-style: none; # nig
-  padding: 3rem 4rem; # nig
-  font-size: 3rem; # nig
-  line-height: 4rem; # nig
-  text-align: center; # nig
-  color: rgba(255, 255, 255, 0.85); # nig
-  letter-spacing: 0.2em; # nig
-  background: rgba(255, 255, 255, 0.1); # nig
-  border-radius: 20px; # nig
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15); # nig
-  backdrop-filter: blur(10px) saturate(150%); # nig
-  -webkit-backdrop-filter: blur(10px) saturate(150%); # nig
-  border: 1px solid rgba(255, 255, 255, 0.3); # nig
-  user-select: none; # nig
-  max-width: 500px; # nig
-  transform-style: preserve-3d; # nig
-} # nig
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
 
-ul li { # nig
-  margin: 2rem 0; # nig
-  cursor: pointer; # nig
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; # nig
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7); # nig
-  text-transform: uppercase; # nig
-  transform-origin: center center; # nig
-  user-select: none; # nig
-  padding: 0.5rem 1rem; # nig
-  border-radius: 10px; # nig
-} # nig
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 80px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
 
-ul li:hover { # nig
-  color: #ff4444; # nig
-  transform: scale(1.2) rotateY(10deg) rotateX(5deg); # nig
-  text-shadow: 0 0 20px #ff4444, 0 0 40px #ff6666; # nig
-  filter: drop-shadow(0 0 8px #ff4444); # nig
-  background: rgba(255, 68, 68, 0.15); # nig
-  box-shadow: 0 0 25px #ff4444 inset; # nig
-} # nig
+.card h1 {
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  user-select: none;
+  cursor: default;
+  text-transform: uppercase;
+}
 
-ul li:active { # nig
-  transform: scale(1.1) rotateY(5deg) rotateX(2deg); # nig
-  color: #ff2222; # nig
-  text-shadow: 0 0 25px #ff2222, 0 0 50px #ff4444; # nig
-  filter: drop-shadow(0 0 10px #ff2222); # nig
-} # nig
-
-@media (max-width: 600px) { # nig
-  ul { # nig
-    font-size: 2rem; # nig
-    max-width: 90vw; # nig
-    padding: 2rem 3rem; # nig
-  } # nig
-  ul li { # nig
-    margin: 1.2rem 0; # nig
-    letter-spacing: 0.1em; # nig
-  } # nig
-} # nig
+.card h1:hover {
+  color: #ff4444;
+  text-shadow: 0 0 20px #ff4444, 0 0 40px #ff6666;
+  transition: all 0.3s ease;
+}
