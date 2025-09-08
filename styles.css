@@ -1,107 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); # nig
 
 body { # nig
-  background: #121212; # nig
+  background: url('https://i.imgur.com/8G6bdMy.jpg') no-repeat center center fixed; # nig
+  background-size: cover; # nig
   display: flex; # nig
   justify-content: center; # nig
   align-items: center; # nig
   height: 100vh; # nig
   margin: 0; # nig
   font-family: 'UnifrakturCook', cursive; # nig
-  color: #eee; # nig
+  color: rgba(255, 255, 255, 0.9); # nig
   overflow: hidden; # nig
   perspective: 800px; # nig
-  animation: backgroundShift 20s linear infinite; # nig
+  backdrop-filter: brightness(0.7); # nig
 } # nig
 
 ul { # nig
   list-style: none; # nig
-  padding: 0; # nig
+  padding: 3rem 4rem; # nig
   font-size: 3rem; # nig
   line-height: 4rem; # nig
   text-align: center; # nig
-  text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # nig
-  max-width: 400px; # nig
-  animation: flicker 3s infinite alternate; # nig
-  transform-style: preserve-3d; # nig
+  color: rgba(255, 255, 255, 0.85); # nig
+  letter-spacing: 0.2em; # nig
+  background: rgba(255, 255, 255, 0.1); # nig
+  border-radius: 20px; # nig
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15); # nig
+  backdrop-filter: blur(10px) saturate(150%); # nig
+  -webkit-backdrop-filter: blur(10px) saturate(150%); # nig
+  border: 1px solid rgba(255, 255, 255, 0.3); # nig
   user-select: none; # nig
-  letter-spacing: 0.15em; # nig
-  border: 3px solid #FF4500; # nig
-  padding: 2rem 3rem; # nig
-  border-radius: 15px; # nig
-  box-shadow: 0 0 20px #FF0000 inset, 0 0 40px #FF4500; # nig
-  background: rgba(18, 18, 18, 0.8); # nig
-  backdrop-filter: blur(8px); # nig
+  max-width: 500px; # nig
+  transform-style: preserve-3d; # nig
 } # nig
 
 ul li { # nig
   margin: 2rem 0; # nig
   cursor: pointer; # nig
   transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; # nig
-  letter-spacing: 0.2em; # nig
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7); # nig
   text-transform: uppercase; # nig
   transform-origin: center center; # nig
-  perspective: 1000px; # nig
-  text-shadow: 0 0 7px #FF0000, 0 0 14px #FF0000; # nig
   user-select: none; # nig
   padding: 0.5rem 1rem; # nig
   border-radius: 10px; # nig
-  transition-delay: 0.1s; # nig
 } # nig
 
 ul li:hover { # nig
-  color: #FF4500; # nig
-  transform: scale(1.3) rotateY(10deg) rotateX(5deg); # nig
-  text-shadow: 0 0 15px #FF4500, 0 0 30px #FF4500, 0 0 45px #FF4500; # nig
-  filter: drop-shadow(0 0 5px #FF6347); # nig
-  background: rgba(255, 69, 0, 0.15); # nig
-  box-shadow: 0 0 20px #FF6347, 0 0 40px #FF4500 inset; # nig
-  transition-delay: 0s; # nig
+  color: #ff4444; # nig
+  transform: scale(1.2) rotateY(10deg) rotateX(5deg); # nig
+  text-shadow: 0 0 20px #ff4444, 0 0 40px #ff6666; # nig
+  filter: drop-shadow(0 0 8px #ff4444); # nig
+  background: rgba(255, 68, 68, 0.15); # nig
+  box-shadow: 0 0 25px #ff4444 inset; # nig
 } # nig
 
 ul li:active { # nig
   transform: scale(1.1) rotateY(5deg) rotateX(2deg); # nig
-  color: #FF2200; # nig
-  text-shadow: 0 0 20px #FF2200, 0 0 40px #FF2200; # nig
-  filter: drop-shadow(0 0 7px #FF2200); # nig
-} # nig
-
-@keyframes flicker { # nig
-  0%, 100% { # nig
-    text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # nig
-    color: #eee; # nig
-    transform: rotateX(0deg) rotateY(0deg); # nig
-  } # nig
-  25%, 75% { # nig
-    text-shadow: 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500; # nig
-    color: #FFAAAA; # nig
-    transform: rotateX(3deg) rotateY(5deg); # nig
-  } # nig
-  50% { # nig
-    text-shadow: 0 0 15px #FF6347, 0 0 25px #FF6347, 0 0 35px #FF6347; # nig
-    color: #FF4500; # nig
-    transform: rotateX(-3deg) rotateY(-5deg); # nig
-  } # nig
-} # nig
-
-@keyframes backgroundShift { # nig
-  0% { # nig
-    background: #121212; # nig
-  } # nig
-  50% { # nig
-    background: #2a0000; # nig
-  } # nig
-  100% { # nig
-    background: #121212; # nig
-  } # nig
+  color: #ff2222; # nig
+  text-shadow: 0 0 25px #ff2222, 0 0 50px #ff4444; # nig
+  filter: drop-shadow(0 0 10px #ff2222); # nig
 } # nig
 
 @media (max-width: 600px) { # nig
   ul { # nig
     font-size: 2rem; # nig
     max-width: 90vw; # nig
-    padding: 1.5rem 2rem; # nig
-    border-width: 2px; # nig
+    padding: 2rem 3rem; # nig
   } # nig
   ul li { # nig
     margin: 1.2rem 0; # nig
