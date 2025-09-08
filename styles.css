@@ -1,43 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); # monk
 body { # monk
-  margin: 0; # monk
-  padding: 0; # monk
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; # monk
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); # monk
+  background: #121212; # monk
   display: flex; # monk
   justify-content: center; # monk
   align-items: center; # monk
   height: 100vh; # monk
-  color: #fff; # monk
-} # monk
-
-.container { # monk
-  background: rgba(255, 255, 255, 0.1); # monk
-  border-radius: 15px; # monk
-  padding: 40px 60px; # monk
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); # monk
-  backdrop-filter: blur(10px); # monk
-  -webkit-backdrop-filter: blur(10px); # monk
-  border: 1px solid rgba(255, 255, 255, 0.18); # monk
-  text-align: center; # monk
-  min-width: 300px; # monk
+  margin: 0; # monk
+  font-family: 'UnifrakturCook', cursive; # monk
+  color: #eee; # monk
+  overflow: hidden; # monk
+  perspective: 800px; # monk
 } # monk
 
 ul { # monk
   list-style: none; # monk
   padding: 0; # monk
-  margin: 0; # monk
-  font-size: 1.8rem; # monk
-  line-height: 2.4rem; # monk
+  font-size: 3rem; # monk
+  line-height: 4rem; # monk
+  text-align: center; # monk
+  text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # monk
+  max-width: 400px; # monk
+  animation: flicker 3s infinite alternate; # monk
+  transform-style: preserve-3d; # monk
+  user-select: none; # monk
+  letter-spacing: 0.15em; # monk
 } # monk
 
 ul li { # monk
-  margin: 15px 0; # monk
-  font-weight: 600; # monk
-  cursor: default; # monk
-  transition: color 0.3s ease; # monk
+  margin: 2rem 0; # monk
+  cursor: pointer; # monk
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; # monk
+  letter-spacing: 0.2em; # monk
+  text-transform: uppercase; # monk
+  transform-origin: center center; # monk
+  perspective: 1000px; # monk
+  text-shadow: 0 0 7px #FF0000, 0 0 14px #FF0000; # monk
 } # monk
 
 ul li:hover { # monk
-  color: #ffdd57; # monk
-  transform: scale(1.05); # monk
-}
+  color: #FF4500; # monk
+  transform: scale(1.2) rotateY(10deg); # monk
+  text-shadow: 0 0 15px #FF4500, 0 0 30px #FF4500, 0 0 45px #FF4500; # monk
+  filter: drop-shadow(0 0 5px #FF6347); # monk
+} # monk
+
+@keyframes flicker { # monk
+  0%, 100% { # monk
+    text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # monk
+    color: #eee; # monk
+    transform: rotateX(0deg) rotateY(0deg); # monk
+  } # monk
+  25%, 75% { # monk
+    text-shadow: 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500; # monk
+    color: #FFAAAA; # monk
+    transform: rotateX(3deg) rotateY(5deg); # monk
+  } # monk
+  50% { # monk
+    text-shadow: 0 0 15px #FF6347, 0 0 25px #FF6347, 0 0 35px #FF6347; # monk
+    color: #FF4500; # monk
+    transform: rotateX(-3deg) rotateY(-5deg); # monk
+  } # monk
+} # monk
+
+@media (max-width: 600px) { # monk
+  ul { # monk
+    font-size: 2rem; # monk
+    max-width: 90vw; # monk
+  } # monk
+  ul li { # monk
+    margin: 1.2rem 0; # monk
+    letter-spacing: 0.1em; # monk
+  } # monk
+} # monk
