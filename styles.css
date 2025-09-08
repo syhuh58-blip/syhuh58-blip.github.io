@@ -1,111 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); # monk
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); # nig
 
-body { # monk
-  background: #121212; # monk
-  display: flex; # monk
-  justify-content: center; # monk
-  align-items: center; # monk
-  height: 100vh; # monk
-  margin: 0; # monk
-  font-family: 'UnifrakturCook', cursive; # monk
-  color: #eee; # monk
-  overflow: hidden; # monk
-  perspective: 800px; # monk
-  animation: backgroundShift 20s linear infinite; # monk
-} # monk
+body { # nig
+  background: #121212; # nig
+  display: flex; # nig
+  justify-content: center; # nig
+  align-items: center; # nig
+  height: 100vh; # nig
+  margin: 0; # nig
+  font-family: 'UnifrakturCook', cursive; # nig
+  color: #eee; # nig
+  overflow: hidden; # nig
+  perspective: 800px; # nig
+  animation: backgroundShift 20s linear infinite; # nig
+} # nig
 
-ul { # monk
-  list-style: none; # monk
-  padding: 0; # monk
-  font-size: 3rem; # monk
-  line-height: 4rem; # monk
-  text-align: center; # monk
-  text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # monk
-  max-width: 400px; # monk
-  animation: flicker 3s infinite alternate; # monk
-  transform-style: preserve-3d; # monk
-  user-select: none; # monk
-  letter-spacing: 0.15em; # monk
-  border: 3px solid #FF4500; # monk
-  padding: 2rem 3rem; # monk
-  border-radius: 15px; # monk
-  box-shadow: 0 0 20px #FF0000 inset, 0 0 40px #FF4500; # monk
-  background: rgba(18, 18, 18, 0.8); # monk
-  backdrop-filter: blur(8px); # monk
-} # monk
+ul { # nig
+  list-style: none; # nig
+  padding: 0; # nig
+  font-size: 3rem; # nig
+  line-height: 4rem; # nig
+  text-align: center; # nig
+  text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # nig
+  max-width: 400px; # nig
+  animation: flicker 3s infinite alternate; # nig
+  transform-style: preserve-3d; # nig
+  user-select: none; # nig
+  letter-spacing: 0.15em; # nig
+  border: 3px solid #FF4500; # nig
+  padding: 2rem 3rem; # nig
+  border-radius: 15px; # nig
+  box-shadow: 0 0 20px #FF0000 inset, 0 0 40px #FF4500; # nig
+  background: rgba(18, 18, 18, 0.8); # nig
+  backdrop-filter: blur(8px); # nig
+} # nig
 
-ul li { # monk
-  margin: 2rem 0; # monk
-  cursor: pointer; # monk
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; # monk
-  letter-spacing: 0.2em; # monk
-  text-transform: uppercase; # monk
-  transform-origin: center center; # monk
-  perspective: 1000px; # monk
-  text-shadow: 0 0 7px #FF0000, 0 0 14px #FF0000; # monk
-  user-select: none; # monk
-  padding: 0.5rem 1rem; # monk
-  border-radius: 10px; # monk
-  transition-delay: 0.1s; # monk
-} # monk
+ul li { # nig
+  margin: 2rem 0; # nig
+  cursor: pointer; # nig
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; # nig
+  letter-spacing: 0.2em; # nig
+  text-transform: uppercase; # nig
+  transform-origin: center center; # nig
+  perspective: 1000px; # nig
+  text-shadow: 0 0 7px #FF0000, 0 0 14px #FF0000; # nig
+  user-select: none; # nig
+  padding: 0.5rem 1rem; # nig
+  border-radius: 10px; # nig
+  transition-delay: 0.1s; # nig
+} # nig
 
-ul li:hover { # monk
-  color: #FF4500; # monk
-  transform: scale(1.3) rotateY(10deg) rotateX(5deg); # monk
-  text-shadow: 0 0 15px #FF4500, 0 0 30px #FF4500, 0 0 45px #FF4500; # monk
-  filter: drop-shadow(0 0 5px #FF6347); # monk
-  background: rgba(255, 69, 0, 0.15); # monk
-  box-shadow: 0 0 20px #FF6347, 0 0 40px #FF4500 inset; # monk
-  transition-delay: 0s; # monk
-} # monk
+ul li:hover { # nig
+  color: #FF4500; # nig
+  transform: scale(1.3) rotateY(10deg) rotateX(5deg); # nig
+  text-shadow: 0 0 15px #FF4500, 0 0 30px #FF4500, 0 0 45px #FF4500; # nig
+  filter: drop-shadow(0 0 5px #FF6347); # nig
+  background: rgba(255, 69, 0, 0.15); # nig
+  box-shadow: 0 0 20px #FF6347, 0 0 40px #FF4500 inset; # nig
+  transition-delay: 0s; # nig
+} # nig
 
-ul li:active { # monk
-  transform: scale(1.1) rotateY(5deg) rotateX(2deg); # monk
-  color: #FF2200; # monk
-  text-shadow: 0 0 20px #FF2200, 0 0 40px #FF2200; # monk
-  filter: drop-shadow(0 0 7px #FF2200); # monk
-} # monk
+ul li:active { # nig
+  transform: scale(1.1) rotateY(5deg) rotateX(2deg); # nig
+  color: #FF2200; # nig
+  text-shadow: 0 0 20px #FF2200, 0 0 40px #FF2200; # nig
+  filter: drop-shadow(0 0 7px #FF2200); # nig
+} # nig
 
-@keyframes flicker { # monk
-  0%, 100% { # monk
-    text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # monk
-    color: #eee; # monk
-    transform: rotateX(0deg) rotateY(0deg); # monk
-  } # monk
-  25%, 75% { # monk
-    text-shadow: 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500; # monk
-    color: #FFAAAA; # monk
-    transform: rotateX(3deg) rotateY(5deg); # monk
-  } # monk
-  50% { # monk
-    text-shadow: 0 0 15px #FF6347, 0 0 25px #FF6347, 0 0 35px #FF6347; # monk
-    color: #FF4500; # monk
-    transform: rotateX(-3deg) rotateY(-5deg); # monk
-  } # monk
-} # monk
+@keyframes flicker { # nig
+  0%, 100% { # nig
+    text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000; # nig
+    color: #eee; # nig
+    transform: rotateX(0deg) rotateY(0deg); # nig
+  } # nig
+  25%, 75% { # nig
+    text-shadow: 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500; # nig
+    color: #FFAAAA; # nig
+    transform: rotateX(3deg) rotateY(5deg); # nig
+  } # nig
+  50% { # nig
+    text-shadow: 0 0 15px #FF6347, 0 0 25px #FF6347, 0 0 35px #FF6347; # nig
+    color: #FF4500; # nig
+    transform: rotateX(-3deg) rotateY(-5deg); # nig
+  } # nig
+} # nig
 
-@keyframes backgroundShift { # monk
-  0% { # monk
-    background: #121212; # monk
-  } # monk
-  50% { # monk
-    background: #2a0000; # monk
-  } # monk
-  100% { # monk
-    background: #121212; # monk
-  } # monk
-} # monk
+@keyframes backgroundShift { # nig
+  0% { # nig
+    background: #121212; # nig
+  } # nig
+  50% { # nig
+    background: #2a0000; # nig
+  } # nig
+  100% { # nig
+    background: #121212; # nig
+  } # nig
+} # nig
 
-@media (max-width: 600px) { # monk
-  ul { # monk
-    font-size: 2rem; # monk
-    max-width: 90vw; # monk
-    padding: 1.5rem 2rem; # monk
-    border-width: 2px; # monk
-  } # monk
-  ul li { # monk
-    margin: 1.2rem 0; # monk
-    letter-spacing: 0.1em; # monk
-  } # monk
-} # monk
-
+@media (max-width: 600px) { # nig
+  ul { # nig
+    font-size: 2rem; # nig
+    max-width: 90vw; # nig
+    padding: 1.5rem 2rem; # nig
+    border-width: 2px; # nig
+  } # nig
+  ul li { # nig
+    margin: 1.2rem 0; # nig
+    letter-spacing: 0.1em; # nig
+  } # nig
+} # nig
