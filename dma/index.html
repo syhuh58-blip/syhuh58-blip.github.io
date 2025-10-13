@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>I Am A Cheater</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ef4444;--muted:#94a3b8}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:radial-gradient(circle at 10% 10%, rgba(239,68,68,0.06), transparent 10%), var(--bg);color:#e6eef8;display:flex;align-items:center;justify-content:center;padding:32px}
+    .wrap{max-width:1100px;width:100%}
+    header{display:flex;align-items:center;gap:20px;margin-bottom:28px}
+    .logo{width:76px;height:76px;border-radius:14px;background:linear-gradient(135deg,#111827,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:18px;box-shadow:0 6px 24px rgba(0,0,0,.6)}
+    h1{font-size:34px;margin:0}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:16px;padding:22px;border:1px solid rgba(255,255,255,0.03)}
+
+    .banner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .badge{background:rgba(239,68,68,0.12);color:var(--accent);padding:8px 12px;border-radius:999px;font-weight:600}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center}
+    .card img{max-width:100%;height:160px;object-fit:contain;border-radius:8px;background:linear-gradient(180deg,#0b1220,#08101a);padding:10px}
+    .caption{font-weight:700}
+    .small{color:var(--muted);font-size:13px}
+
+    .cta{margin-top:18px;display:flex;gap:12px;align-items:center}
+    .cta .danger{background:transparent;border:2px solid var(--accent);padding:10px 14px;border-radius:10px;font-weight:700;color:var(--accent)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    @media (max-width:520px){h1{font-size:26px}.card img{height:120px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">CHEAT</div>
+      <div>
+        <h1>I am a cheater</h1>
+        <p class="lead">(This page is intentionally dramatic — replace the images with your own.)</p>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="banner">
+        <div>
+          <div class="badge">Cheat till bans</div>
+          <p class="small" style="margin-top:8px">Brag page template showing hardware and gear — edit captions, images, and text below.</p>
+        </div>
+        <div class="cta">
+          <button class="danger">CHEAT TILL BANS</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Replace the src attributes below with your own image files. Examples: images/kmbox-b-pro.jpg -->
+        <figure class="card">
+          <img src="images/kmbox-b-pro.jpg" alt="kmbox b pro" />
+          <figcaption class="caption">kmbox b pro</figcaption>
+          <div class="small">High-end DMA / spoof device (image placeholder)</div>
+        </figure>
+
+        <figure class="card">
+          <img src="images/macku.jpg" alt="macku" />
+          <figcaption class="caption">macku</figcaption>
+          <div class="small">Hardware unit (image placeholder)</div>
+        </figure>
+
+        <figure class="card">
+          <img src="images/kmbox-net.jpg" alt="kmbox net" />
+          <figcaption class="caption">kmbox net</figcaption>
+          <div class="small">Network/DMA card (image placeholder)</div>
+        </figure>
+
+        <figure class="card">
+          <img src="images/dma-card.jpg" alt="dma card" />
+          <figcaption class="caption">DMA Card</figcaption>
+          <div class="small">Plug-and-play image (placeholder)</div>
+        </figure>
+      </div>
+
+      <footer>
+        <p><strong>Note:</strong> This page is a template for visual effect. Cheating in online games or using specialized hardware may violate game terms of service and local laws. Use responsibly — this template is provided for satire/creative use only.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Usage:
+       1) Put your image files in an "images/" folder next to this HTML file and update filenames if necessary.
+       2) Edit the captions or text directly in this file.
+       3) Open this file in a browser to preview.
+  -->
+</body>
+</html>
