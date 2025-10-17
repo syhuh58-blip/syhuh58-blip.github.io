@@ -6,58 +6,57 @@
 <title>XanBin — Public Pastes</title>
 <style>
 :root{
-  --bg-0:#080205;
-  --bg-1:#13060a;
-  --panel:#12060a;
-  --muted:#b5a6a6;
-  --accent:#ff2b2b;
-  --accent-2:#b71c1c;
-  --row-odd:#0d0708;
-  --row-even:#12070a;
-  --pinned:#3b1410;
-  --glass:rgba(255,255,255,0.03);
-  --card-radius:12px;
+  --bg-0:#070506;
+  --bg-1:#120809;
+  --panel:#0f0808;
+  --muted:#b8a9a9;
+  --accent:#ff3b3b;
+  --accent-2:#b91c1c;
+  --row-dark:#0b0808;
+  --row-light:#141010;
+  --glass: rgba(255,255,255,0.03);
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:
-  radial-gradient(ellipse at 10% 20%, rgba(255,43,43,0.04), transparent 5%),
-  linear-gradient(180deg,var(--bg-0),var(--bg-1) 65%);color:#f3e9e9}
+  radial-gradient(ellipse at 10% 20%, rgba(255,59,59,0.04), transparent 5%),
+  linear-gradient(180deg,var(--bg-0),var(--bg-1) 60%);color:#fff}
 canvas#bgc{position:fixed;left:0;top:0;z-index:0;pointer-events:none}
-.app{max-width:1160px;margin:40px auto;padding:20px;position:relative;z-index:1}
+.app{max-width:1100px;margin:36px auto;padding:18px;position:relative;z-index:1}
 header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:14px;box-shadow:0 8px 28px rgba(0,0,0,.6)}
-.title{display:flex;flex-direction:column}
-.title h1{font-size:20px;margin:0}
-.title .sub{font-size:13px;color:var(--muted)}
-.controls{margin-left:auto;display:flex;gap:12px;align-items:center}
-.searchbar{display:flex;gap:8px;align-items:center;background:var(--panel);padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-.searchbar input{background:transparent;border:0;color:inherit;padding:7px 8px;min-width:260px}
-.btn{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:8px 12px;border-radius:10px;cursor:pointer;color:inherit}
-.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:0;font-weight:700}
-.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--card-radius);padding:16px;border:1px solid rgba(255,255,255,0.04);z-index:1}
+.logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#230606,var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:14px;box-shadow:0 8px 28px rgba(0,0,0,.6)}
+h1{font-size:20px;margin:0}
+.topbar-info{color:var(--muted);font-size:13px}
+.controls{margin-left:auto;display:flex;gap:10px;align-items:center}
+.searchbar{display:flex;gap:8px;align-items:center;background:var(--panel);padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+.searchbar input{background:transparent;border:0;color:inherit;padding:6px 8px;min-width:260px}
+.btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;cursor:pointer;color:inherit}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#e53935);border:0;font-weight:700}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04)}
 .meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.badge{background:rgba(255,43,43,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:700}
-.muted{color:var(--muted);font-size:13px}
-.table-wrap{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+.badge{background:linear-gradient(90deg,#3b0b0b,#2c0a0a);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:700}
 table{width:100%;border-collapse:collapse;font-size:13px}
-thead th{background:rgba(0,0,0,0.45);padding:12px;text-align:left;color:var(--muted);font-weight:700}
+thead th{background:rgba(0,0,0,0.45);padding:10px;text-align:left;color:var(--muted);font-weight:700;border-radius:6px}
 tbody tr{cursor:pointer;transition:background .12s}
 tbody tr:hover{background:rgba(255,255,255,0.02)}
-tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
-.col-title{width:50%}
+tbody td{padding:10px;border-top:1px solid rgba(255,255,255,0.02)}
+.col-title{width:45%}
 .col-views,.col-comments,.col-date{width:10%;text-align:right;color:var(--muted)}
-.posted-by{color:#ffbf00;font-weight:600;text-align:right}
-.pinned-row{background:linear-gradient(90deg,#3b1110,#31110f);color:#fff}
-.empty-placeholder{padding:60px;text-align:center;color:var(--muted);font-size:15px}
-.pagination{display:flex;gap:8px;padding:12px;justify-content:center}
-.pager{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:8px 12px;border-radius:8px;cursor:pointer}
-.pager.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:0;color:#fff}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:none;align-items:center;justify-content:center;z-index:30}
-.modal{background:linear-gradient(180deg,#14060a,#100409);padding:18px;border-radius:12px;width:92%;max-width:760px;border:1px solid rgba(255,255,255,0.04)}
+.posted-by{color:#ffb86b;font-weight:600;text-align:right}
+.pinned-row{background:linear-gradient(90deg,#381b12,#2b120d);color:#fff}
+.pinned-area{margin-bottom:12px;border-radius:8px;overflow:hidden}
+.pagination{display:flex;gap:6px;padding:10px;justify-content:center}
+.pager{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:6px 10px;border-radius:6px;cursor:pointer}
+.pager.active{background:linear-gradient(90deg,var(--accent),#a40f0f);border:0}
+.muted{color:var(--muted);font-size:13px}
+.small{font-size:12px;color:var(--muted)}
+.row-title{font-weight:700;color:#fff}
+.row-sub{color:var(--muted);font-size:12px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:30}
+.modal{background:linear-gradient(180deg,#0c0707,#0a0707);padding:18px;border-radius:10px;width:90%;max-width:820px;border:1px solid rgba(255,255,255,0.04)}
 .form-row{display:flex;flex-direction:column;gap:6px;margin:8px 0}
-.form-row input,.form-row textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit;min-height:40px}
-.form-row textarea{min-height:160px;resize:vertical}
-@media (max-width:760px){
+.form-row input,.form-row textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:6px;color:inherit;min-height:36px}
+.form-row textarea{min-height:140px;resize:vertical;padding:10px}
+@media (max-width:720px){
   .col-date,.col-views{display:none}
   .searchbar input{min-width:120px}
 }
@@ -68,9 +67,9 @@ tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
 <div class="app" id="app">
   <header>
     <div class="logo">X</div>
-    <div class="title">
+    <div>
       <h1>XanBin</h1>
-      <div class="sub">Public Pastes</div>
+      <div class="topbar-info small">Share text snippets · local demo</div>
     </div>
     <div class="controls">
       <div class="searchbar" role="search">
@@ -83,16 +82,16 @@ tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
 
   <main class="panel">
     <div class="meta">
-      <div style="display:flex;align-items:center;gap:12px">
+      <div style="display:flex;gap:12px;align-items:center">
         <div class="badge">Pinned</div>
-        <div class="muted" id="stats">Showing 0 entries</div>
+        <div class="muted" id="stats">Showing 0 pastes</div>
       </div>
-      <div class="muted">Showing <span id="showingCount">0</span> of <span id="totalCount">0</span> total pastes</div>
+      <div class="small muted">Showing <span id="showingCount">0</span> of <span id="totalCount">0</span> total pastes</div>
     </div>
 
-    <div id="pinnedArea" class="table-wrap"></div>
+    <div class="pinned-area" id="pinnedArea"></div>
 
-    <div id="listArea" class="table-wrap" style="margin-top:12px">
+    <div id="listArea">
       <table id="pasteTable" aria-live="polite">
         <thead>
           <tr>
@@ -105,7 +104,6 @@ tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
         </thead>
         <tbody id="pasteBody"></tbody>
       </table>
-      <div id="emptyPlaceholder" class="empty-placeholder">No pastes yet. Create one with the "New Paste" button.</div>
     </div>
 
     <div class="pagination" id="pagination"></div>
@@ -121,7 +119,7 @@ tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
         <button class="btn" id="closeView">Close</button>
       </div>
     </div>
-    <div class="muted" style="margin-top:8px" id="viewMeta">by user — date</div>
+    <div class="small muted" style="margin-top:8px" id="viewMeta">by user — date</div>
     <pre id="viewContent" style="white-space:pre-wrap;margin-top:12px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px"></pre>
   </div>
 </div>
@@ -134,15 +132,15 @@ tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
     </div>
 
     <div class="form-row">
-      <label class="muted">Title</label>
+      <label class="small">Title</label>
       <input id="newTitle" placeholder="Short descriptive title" />
     </div>
     <div class="form-row">
-      <label class="muted">Your name</label>
+      <label class="small">Your name</label>
       <input id="newAuthor" placeholder="anonymous" />
     </div>
     <div class="form-row">
-      <label class="muted">Paste text</label>
+      <label class="small">Paste text</label>
       <textarea id="newContent" placeholder="Paste your text here..."></textarea>
     </div>
     <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
@@ -153,7 +151,183 @@ tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
 </div>
 
 <script>
-const canvas=document.getElementById('bgc');const ctx=canvas.getContext('2d');let w=canvas.width=innerWidth,h=canvas.height=innerHeight;const particles=[];const N=Math.max(20,Math.floor((w*h)/120000));for(let i=0;i<N;i++){particles.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+0.6,vx:(Math.random()-0.5)*0.25,vy:(Math.random()-0.5)*0.25,hue:340+Math.random()*20,alpha:0.12+Math.random()*0.18});}
-function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;}
-addEventListener('resize',resize);
-function step(){ctx.clearRect(0,0,w,h);particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;ctx
+const perPage = 10;
+let state = { pastes: [], q: '', page: 1 };
+
+function uid(){ return 'p'+Math.random().toString(36).slice(2,9); }
+
+function load(){
+  const raw = localStorage.getItem('xanbin_pastes_v1');
+  if(raw){
+    try{ state.pastes = JSON.parse(raw) }catch(e){ state.pastes = []; save() }
+  } else {
+    state.pastes = [];
+    save();
+  }
+}
+function save(){ localStorage.setItem('xanbin_pastes_v1', JSON.stringify(state.pastes)) }
+
+function escapeHtml(s){ if(!s) return ''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
+
+function formatRow(p){
+  return `
+    <tr data-id="${p.id}" class="${p.pinned ? 'pinned-row' : ''}">
+      <td class="col-title">
+        <div class="row-title">${escapeHtml(p.title)}</div>
+        <div class="row-sub">${escapeHtml(p.content.slice(0,120))}${p.content.length>120?'…':''}</div>
+      </td>
+      <td class="col-comments">${p.comments ?? '-'}</td>
+      <td class="col-views">${p.views ?? 0}</td>
+      <td class="posted-by">${escapeHtml(p.author || 'anonymous')}</td>
+      <td class="col-date">${escapeHtml(p.date || '')}</td>
+    </tr>
+  `;
+}
+
+function render(){
+  const body = document.getElementById('pasteBody');
+  const pinnedArea = document.getElementById('pinnedArea');
+  const total = state.pastes.length;
+  document.getElementById('totalCount').textContent = total;
+  const q = state.q.trim().toLowerCase();
+  let filtered = state.pastes.filter(p=>{
+    if(!q) return true;
+    return (p.title||'').toLowerCase().includes(q) || (p.content||'').toLowerCase().includes(q);
+  });
+  document.getElementById('showingCount').textContent = filtered.length;
+  const pinned = filtered.filter(p=>p.pinned);
+  const others = filtered.filter(p=>!p.pinned);
+  if(pinned.length){
+    pinnedArea.innerHTML = `<table><tbody>${pinned.map(p=>`
+      <tr data-id="${p.id}" class="pinned-row">
+        <td style="width:45%"><strong>${escapeHtml(p.title)}</strong><div class="small">${escapeHtml(p.content.slice(0,120))}</div></td>
+        <td style="width:10%" class="small">${p.comments||0}</td>
+        <td style="width:10%" class="small">${p.views||0}</td>
+        <td style="text-align:right" class="small">${escapeHtml(p.author||'anonymous')}</td>
+        <td style="width:10%" class="small">${escapeHtml(p.date||'')}</td>
+      </tr>`).join('')}</tbody></table>`;
+  } else {
+    pinnedArea.innerHTML = '';
+  }
+  const page = state.page || 1;
+  const start = (page-1)*perPage;
+  const pageItems = others.slice(start, start+perPage);
+  body.innerHTML = pageItems.map(formatRow).join('');
+  setupRowClicks();
+  const pages = Math.max(1, Math.ceil(others.length / perPage));
+  const pg = document.getElementById('pagination');
+  pg.innerHTML = '';
+  for(let i=1;i<=pages;i++){
+    const btn = document.createElement('button');
+    btn.className = 'pager' + (i===page ? ' active' : '');
+    btn.textContent = i;
+    btn.addEventListener('click', ()=>{ state.page = i; render(); });
+    pg.appendChild(btn);
+  }
+  document.getElementById('stats').textContent = `Showing ${pageItems.length + pinned.length} entries`;
+}
+
+function setupRowClicks(){
+  document.querySelectorAll('#pasteBody tr, #pinnedArea tr').forEach(tr=>{
+    tr.onclick = ()=>{
+      const id = tr.getAttribute('data-id');
+      openView(id);
+    };
+  });
+}
+
+const viewModal = document.getElementById('viewModal');
+const newModal = document.getElementById('newModal');
+let activeId = null;
+function openView(id){
+  const p = state.pastes.find(x=>x.id===id);
+  if(!p) return;
+  activeId = id;
+  p.views = (p.views||0)+1;
+  save();
+  document.getElementById('viewTitle').textContent = p.title;
+  document.getElementById('viewMeta').textContent = `${p.author||'anonymous'} — ${p.date||''} • ${p.comments||0} comments`;
+  document.getElementById('viewContent').textContent = p.content;
+  document.getElementById('pinToggle').textContent = p.pinned ? 'Unpin' : 'Pin';
+  viewModal.style.display = 'flex';
+  render();
+}
+
+document.getElementById('closeView').onclick = ()=>{ viewModal.style.display='none'; activeId=null; };
+document.getElementById('pinToggle').onclick = ()=>{
+  if(!activeId) return;
+  const p = state.pastes.find(x=>x.id===activeId);
+  if(!p) return;
+  p.pinned = !p.pinned;
+  save();
+  document.getElementById('pinToggle').textContent = p.pinned ? 'Unpin' : 'Pin';
+  render();
+};
+
+document.getElementById('newBtn').onclick = ()=>{ newModal.style.display='flex'; };
+document.getElementById('closeNew').onclick = ()=>{ newModal.style.display='none'; };
+document.getElementById('savePaste').onclick = ()=>{ saveNew(false); };
+document.getElementById('saveAndView').onclick = ()=>{ saveNew(true); };
+
+function saveNew(openAfter){
+  const title = document.getElementById('newTitle').value.trim() || 'Untitled';
+  const author = document.getElementById('newAuthor').value.trim() || 'anonymous';
+  const content = document.getElementById('newContent').value.trim() || '';
+  const date = new Date().toLocaleDateString(undefined, {month:'short',day:'numeric'});
+  const paste = { id: uid(), title, author, content, comments:0, views:0, date, pinned:false };
+  state.pastes.unshift(paste);
+  save();
+  document.getElementById('newTitle').value='';
+  document.getElementById('newAuthor').value='';
+  document.getElementById('newContent').value='';
+  newModal.style.display='none';
+  if(openAfter) openView(paste.id);
+  render();
+}
+
+document.getElementById('searchBtn').onclick = ()=>{ state.q = document.getElementById('searchInput').value; state.page = 1; render(); };
+document.getElementById('searchInput').addEventListener('keydown', e=>{ if(e.key==='Enter'){ state.q = e.target.value; state.page=1; render(); } });
+addEventListener('keydown', e=>{ if(e.key==='n' && document.activeElement.tagName!=='INPUT' && document.activeElement.tagName!=='TEXTAREA'){ newModal.style.display='flex'; } });
+
+load();
+render();
+
+(function(){
+  const canvas = document.getElementById('bgc');
+  const ctx = canvas.getContext('2d');
+  let w=canvas.width=innerWidth, h=canvas.height=innerHeight;
+  const particles=[];
+  const N = Math.floor((w*h)/120000);
+  for(let i=0;i<N;i++){
+    particles.push({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*2+0.8,
+      vx: (Math.random()-0.5)*0.25,
+      vy: (Math.random()-0.5)*0.25,
+      hue: 345 + Math.random()*20
+    });
+  }
+  function resize(){ w=canvas.width=innerWidth; h=canvas.height=innerHeight; }
+  addEventListener('resize', resize);
+  function step(){
+    ctx.clearRect(0,0,w,h);
+    particles.forEach(p=>{
+      p.x += p.vx;
+      p.y += p.vy;
+      if(p.x<0)p.x=w;
+      if(p.x>w)p.x=0;
+      if(p.y<0)p.y=h;
+      if(p.y>h)p.y=0;
+      ctx.beginPath();
+      ctx.fillStyle = 'hsla('+p.hue+',70%,'+(30+Math.abs(Math.sin(p.x))*8)+'%,0.85)';
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+    });
+    requestAnimationFrame(step);
+  }
+  step();
+})();
+</script>
+</body>
+</html>
