@@ -12,150 +12,89 @@
       color: #fff;
       overflow-x: hidden;
     }
-
     header {
       position: sticky;
       top: 0;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0,0,0,0.8);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 100;
     }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: #d4af37;
-      margin: 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
+    header h1 { font-size: 1.5rem; color: #d4af37; margin:0; }
+    nav a { color:#fff; text-decoration:none; margin:0 1rem; transition:color 0.3s; }
+    nav a:hover { color:#d4af37; }
     .hero {
       background: url('https://cdn1.treatwell.net/images/view/v2.i1524154.w1080.h720.xC223EADA/') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height:300px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
-
     .hero h2 {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      color: #d4af37;
-      font-size: 2.5rem;
+      background: rgba(0,0,0,0.6);
+      padding:1rem 2rem;
+      border-radius:8px;
+      color:#d4af37;
+      font-size:2.5rem;
       animation: fadeIn 1.5s ease-in-out;
     }
-
-    .accordion {
-      width: 90%;
-      max-width: 900px;
-      margin: 3rem auto;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .accordion-item {
-      background: #1a1a1a;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
-
+    .accordion { width:90%; max-width:900px; margin:3rem auto; animation:fadeIn 1s ease-in-out; }
+    .accordion-item { background:#1a1a1a; border-radius:10px; margin-bottom:1rem; overflow:hidden; }
     .accordion-header {
-      background: #111;
-      color: #d4af37;
-      padding: 1rem;
-      cursor: pointer;
-      font-weight: bold;
-      border: none;
-      width: 100%;
-      text-align: left;
-      outline: none;
+      background:#111;
+      color:#d4af37;
+      padding:1rem;
+      cursor:pointer;
+      font-weight:bold;
+      border:none;
+      width:100%;
+      text-align:left;
+      outline:none;
       transition: background 0.3s;
     }
-
-    .accordion-header:hover, .accordion-header:focus {
-      background: #222;
-    }
-
+    .accordion-header:hover, .accordion-header:focus { background:#222; }
     .accordion-content {
-      overflow: hidden;
-      height: 0;
+      overflow:hidden;
+      height:0;
       transition: height 0.4s ease;
-      background: #181818;
-      padding: 0 1rem;
+      background:#181818;
+      padding:0 1rem;
     }
-
-    .accordion-content.open {
-      padding: 1rem;
-    }
-
+    .accordion-content.open { padding:1rem; }
     .service-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #333;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0.5rem 0;
+      border-bottom:1px solid #333;
     }
-
-    .service-item:last-child {
-      border-bottom: none;
-    }
-
-    .service-item span:last-child a.book-btn {
-      margin-left: 10px;
-    }
-
+    .service-item:last-child { border-bottom:none; }
+    .service-item span:last-child a.book-btn { margin-left:10px; }
     .book-btn {
-      background: #d4af37;
-      border: none;
-      color: #000;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+      background:#d4af37;
+      border:none;
+      color:#000;
+      padding:0.4rem 0.8rem;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:background 0.3s;
     }
-
-    .book-btn:hover {
-      background: #b8962e;
-    }
-
+    .book-btn:hover { background:#b8962e; }
     footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
+      background:#000;
+      color:#aaa;
+      text-align:center;
+      padding:2rem 1rem;
+      margin-top:3rem;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-      .accordion {
-        width: 95%;
-      }
-      .service-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .service-item span:last-child {
-        margin-top: 5px;
-      }
+    @keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    @media(max-width:600px) {
+      .accordion { width:95%; }
+      .service-item { flex-direction:column; align-items:flex-start; }
+      .service-item span:last-child { margin-top:5px; }
     }
   </style>
 </head>
@@ -164,7 +103,7 @@
     <h1>Darya’s Touch</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="services.html" style="color: #d4af37;">Services</a>
+      <a href="services.html" style="color:#d4af37;">Services</a>
       <a href="reviews.html">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -180,7 +119,7 @@
     <div class="accordion-item">
       <button class="accordion-header" aria-expanded="false">Patch Test</button>
       <div class="accordion-content">
-        <div class="service-item"><span>Patch Test (5 mins)</span><span>£1.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Patch Test (5 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
@@ -188,20 +127,20 @@
     <div class="accordion-item">
       <button class="accordion-header" aria-expanded="false">Sunbed</button>
       <div class="accordion-content">
-        <div class="service-item"><span>Sunbeds (5 mins - 35 mins)</span><span>from £3.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Sunbeds (5 mins - 35 mins)</span><span>from £3.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
     <!-- Hair & Make Up Packages -->
     <div class="accordion-item">
-      <button class="accordion-header" aria-expanded="false">Hair & Make Up Packages</button>
+      <button class="accordion-header" aria-expanded="false">Hair and Make Up Packages</button>
       <div class="accordion-content">
         <div class="service-item"><span>Bridal Package Consultation (30 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
         <div class="service-item"><span>Prom Package Consultation (30 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
-    <!-- Ladies Haircuts & Hairdressing -->
+    <!-- Ladies - Haircuts & Hairdressing -->
     <div class="accordion-item">
       <button class="accordion-header" aria-expanded="false">Ladies - Haircuts & Hairdressing</button>
       <div class="accordion-content">
@@ -213,22 +152,58 @@
         <div class="service-item"><span>Hair Up (45-60 mins)</span><span>from £35.00 <a class="book-btn" href="#">Book</a></span></div>
         <div class="service-item"><span>Hair Extension Consultation (20 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
         <div class="service-item"><span>Keratin Treatment Free Consultation (20 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Wash & Bouncy Blow Dry (45-60 mins)</span><span>from £35.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
-    <!-- Ladies Hair Colouring & Highlights -->
+    <!-- Ladies - Hair Colouring & Highlights -->
     <div class="accordion-item">
       <button class="accordion-header" aria-expanded="false">Ladies - Hair Colouring & Highlights</button>
       <div class="accordion-content">
         <div class="service-item"><span>Color Correction Free Consultation (30 mins)</span><span>from £0.90 <a class="book-btn" href="#">Book</a></span></div>
-        <div class="service-item"><span>Root Colour (1-2 inches) with Haircut & Blow Dry (2 hrs)</span><span>from £60.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Free Color Consultation (20 mins)</span><span>from £0.90 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Root Colour (1-2 Inches) with Haircut & Blow Dry (2 hrs)</span><span>from £60.00 <a class="book-btn" href="#">Book</a></span></div>
         <div class="service-item"><span>Full Head Colour with Haircut & Blow Dry (2 hrs 15 mins)</span><span>from £67.50 <a class="book-btn" href="#">Book</a></span></div>
-        <div class="service-item"><span>Full Head Highlights (2 hrs 15-30 mins)</span><span>from £180.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Full Head Highlights with Haircut & Blow Dry (2 hrs 15-30 mins)</span><span>from £180.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Half Head Highlights with Haircut & Blow Dry (2 hrs 30 mins)</span><span>from £117.00 <a class="book-btn" href="#">Book</a></span></div>
         <div class="service-item"><span>Balayage with Haircut & Blow Dry (2 hrs 45 mins)</span><span>from £200.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Ombre with Haircut & Blow Dry (2 hrs 30 mins)</span><span>from £220.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
-    <!-- Add more categories here as needed -->
+    <!-- Children - Haircuts -->
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">Children - Haircuts & Hairdressing</button>
+      <div class="accordion-content">
+        <div class="service-item"><span>Boys - Haircut & Style (Under 10 Years) (30 mins)</span><span>£20.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Boys - Haircut & Style (Under 14 Years) Mon-Wed Special (30 mins)</span><span>£25.00 <a class="book-btn" href="#">Book</a></span></div>
+      </div>
+    </div>
+
+    <!-- Men - Haircuts -->
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">Men - Haircuts & Grooming</button>
+      <div class="accordion-content">
+        <div class="service-item"><span>Wash, Haircut & Styling (30 mins)</span><span>£40.00 <a class="book-btn" href="#">Book</a></span></div>
+      </div>
+    </div>
+
+    <!-- Nails -->
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">Nails</button>
+      <div class="accordion-content">
+        <div class="service-item"><span>Manicure (15-40 mins)</span><span>from £15.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Pedicure (15 mins - 1 hr)</span><span>from £20.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Shellac Nails (10-30 mins)</span><span>from £6.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Shellac Toes (5-30 mins)</span><span>from £6.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Shellac Nails & Toes (1 hr)</span><span>£48.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Nail Extensions - Acrylic (30-90 mins)</span><span>from £14.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Ombre Full Set (1 hr)</span><span>from £35.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Nail Extensions - Full Set Biab nails (15-75 mins)</span><span>from £12.00 <a class="book-btn" href="#">Book</a></span></div>
+      </div>
+    </div>
+
+    <!-- More categories like Waxing, Threading, Eyebrows, Massages, Facials, Ear Treatments, Laser Hair Removal etc. can be added in the same format -->
 
   </section>
 
@@ -241,36 +216,27 @@
 
   <script>
     const headers = document.querySelectorAll('.accordion-header');
-
     headers.forEach(header => {
       header.addEventListener('click', () => {
         const content = header.nextElementSibling;
-
         const openContent = document.querySelector('.accordion-content.open');
-        if (openContent && openContent !== content) {
+        if(openContent && openContent !== content) {
           openContent.style.height = 0;
           openContent.classList.remove('open');
-          openContent.previousElementSibling.setAttribute('aria-expanded', 'false');
+          openContent.previousElementSibling.setAttribute('aria-expanded','false');
         }
-
-        if (content.classList.contains('open')) {
+        if(content.classList.contains('open')) {
           content.style.height = 0;
           content.classList.remove('open');
-          header.setAttribute('aria-expanded', 'false');
+          header.setAttribute('aria-expanded','false');
         } else {
           content.classList.add('open');
-          const height = content.scrollHeight + "px";
-          content.style.height = height;
-          header.setAttribute('aria-expanded', 'true');
+          content.style.height = content.scrollHeight + "px";
+          header.setAttribute('aria-expanded','true');
         }
       });
-
-      // Keyboard accessibility
       header.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          header.click();
-        }
+        if(e.key==='Enter'||e.key===' ') { e.preventDefault(); header.click(); }
       });
     });
   </script>
