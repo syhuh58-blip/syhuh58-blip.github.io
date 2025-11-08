@@ -1,106 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ilovedma - fever</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darya’s Touch | Hair Salon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#ef4444;--muted:#94a3b8}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    body{background:radial-gradient(circle at 10% 10%, rgba(239,68,68,0.06), transparent 10%), var(--bg);color:#e6eef8;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
-    
-    .background-video{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      z-index:-1;
-      opacity:0.2;
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
     }
-
-    .wrap{max-width:1100px;width:100%;z-index:1;position:relative}
-    header{display:flex;align-items:center;gap:20px;margin-bottom:28px}
-    .logo{width:76px;height:76px;border-radius:14px;background:linear-gradient(135deg,#111827,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:18px;box-shadow:0 6px 24px rgba(0,0,0,.6)}
-    h1{font-size:34px;margin:0}
-    p.lead{margin:6px 0 0;color:var(--muted)}
-
-    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:16px;padding:22px;border:1px solid rgba(255,255,255,0.03)}
-
-    .banner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .badge{background:rgba(239,68,68,0.12);color:var(--accent);padding:8px 12px;border-radius:999px;font-weight:600}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-    .card{background:var(--card);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center}
-    .card img{max-width:100%;height:160px;object-fit:contain;border-radius:8px;background:linear-gradient(180deg,#0b1220,#08101a);padding:10px}
-    .caption{font-weight:700}
-    .small{color:var(--muted);font-size:13px}
-
-    .cta{margin-top:18px;display:flex;gap:12px;align-items:center}
-    .cta .danger{background:transparent;border:2px solid var(--accent);padding:10px 14px;border-radius:10px;font-weight:700;color:var(--accent)}
-
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-
-    @media (max-width:520px){h1{font-size:26px}.card img{height:120px}}
+    header {
+      background-color: #d4af37;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .info {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+    }
+    .info h2 {
+      color: #d4af37;
+    }
+    .hours table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .hours th, .hours td {
+      text-align: left;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #333;
+      color: white;
+      margin-top: 3rem;
+    }
+    footer p {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Darya’s Touch</h1>
+    <p>Professional Hair Salon in Salford</p>
+  </header>
 
-  <video autoplay muted loop class="background-video"><source src="videos/background.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+  <section>
+    <div class="info">
+      <h2>Visit Us</h2>
+      <p><strong>Address:</strong> 2B, Quays Campus, The Quays, Trafford Rd, Salford M5 3AW, United Kingdom</p>
+      <p><strong>Phone:</strong> <a href="tel:+441612220420">+44 161 222 0420</a></p>
+    </div>
 
-  <div class="wrap">
-    <header>
-      <div class="logo">Fever</div>
-      <div>
-        <h1>I am a cheater</h1>
-        <p class="lead">(skill issue.)</p>
-      </div>
-    </header>
+    <div class="info hours" style="margin-top:2rem;">
+      <h2>Opening Hours</h2>
+      <table>
+        <tr><th>Saturday</th><td>9 AM – 6 PM</td></tr>
+        <tr><th>Sunday</th><td>10 AM – 5:30 PM</td></tr>
+        <tr><th>Monday</th><td>9 AM – 7 PM</td></tr>
+        <tr><th>Tuesday</th><td>9 AM – 7 PM</td></tr>
+        <tr><th>Wednesday</th><td>9 AM – 7 PM</td></tr>
+        <tr><th>Thursday</th><td>9 AM – 7 PM</td></tr>
+        <tr><th>Friday</th><td>9 AM – 7 PM</td></tr>
+      </table>
+    </div>
+  </section>
 
-    <main class="hero">
-      <div class="banner">
-        <div>
-          <div class="badge">Cheat till bans</div>
-          <p class="small" style="margin-top:8px">12345 677777</p>
-        </div>
-        <div class="cta">
-          <button class="danger">CHEAT TILL BANNED</button>
-        </div>
-      </div>
-
-      <div class="grid">
-
-        <figure class="card">
-          <img src="images/kmbox-b-pro.jpg" alt="kmbox b pro" />
-          <figcaption class="caption">kmbox b pro</figcaption>
-          <div class="small">ts what u use for aimbot not ud anymore</div>
-        </figure>
-
-        <figure class="card">
-          <img src="images/macku.jpg" alt="macku" />
-          <figcaption class="caption">macku</figcaption>
-          <div class="small">ud cheap and my goat best aim device</div>
-        </figure>
-
-        <figure class="card">
-          <img src="images/kmbox-net.jpg" alt="kmbox net" />
-          <figcaption class="caption">kmbox net</figcaption>
-          <div class="small">aim device ts semi ud</div>
-        </figure>
-
-        <figure class="card">
-          <img src="images/dma-card.jpg" alt="dma card" />
-          <figcaption class="caption">DMA Card</figcaption>
-          <div class="small">FULL UD I LOVE DMA</div>
-        </figure>
-      </div>
-
-      <footer>
-        <p><strong>Note:</strong> This page is a joke. Cheating in online games or using specialized hardware may violate game terms of service and local laws.</p>
-      </footer>
-    </main>
-  </div>
-
+  <footer>
+    <p>&copy; 2025 Darya’s Touch. All rights reserved.</p>
+    <p>Crafted with care in Salford.</p>
+  </footer>
 </body>
 </html>
