@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Prices | Darya’s Touch</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #d4af37;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #d4af37;
+    }
+    .hero {
+      background: url('https://cdn1.treatwell.net/images/view/v2.i1524154.w1080.h720.xC223EADA/') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero h2 {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      color: #d4af37;
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .accordion {
+      width: 90%;
+      max-width: 900px;
+      margin: 3rem auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .accordion-item {
+      background: #1a1a1a;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .accordion-header {
+      background: #111;
+      color: #d4af37;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background: #181818;
+      padding: 0 1rem;
+    }
+    .accordion-content.open {
+      max-height: 2000px;
+      padding: 1rem;
+    }
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+    }
+    .service-item:last-child {
+      border-bottom: none;
+    }
+    .book-btn {
+      background: #d4af37;
+      border: none;
+      color: #000;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .book-btn:hover {
+      background: #b8962e;
+    }
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Darya’s Touch</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html" style="color: #d4af37;">Services</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Services & Prices</h2>
+  </section>
+
+  <section class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">Ladies' Haircuts & Hairdressing</div>
+      <div class="accordion-content">
+        <div class="service-item"><span>Ladies - Wash, Haircut & Blow Dry</span><span>from £40.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Ladies - Dry Cut</span><span>from £28.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Ladies - Wash & Blow Dry</span><span>from £25.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Nails</div>
+      <div class="accordion-content">
+        <div class="service-item"><span>Manicure</span><span>from £15.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Pedicure</span><span>from £20.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Facials</div>
+      <div class="accordion-content">
+        <div class="service-item"><span>Facial - Deep Cleanse</span><span>from £29.75 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Facial - Deep Cleansing Incl. Massage</span><span>from £42.50 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Ladies' Waxing</div>
+      <div class="accordion-content">
+        <div class="service-item"><span>Hollywood Wax</span><span>£35.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Brazilian Wax</span><span>£35.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p><strong>Address:</strong> 2B, Quays Campus, The Quays, Trafford Rd, Salford M5 3AW, United Kingdom</p>
+    <p><strong>Phone:</strong> +44 161 222 0420</p>
+    <p><strong>Hours:</strong><br>Mon–Fri 9 AM–7 PM • Sat 9 AM–6 PM • Sun 10 AM–5:30 PM</p>
+    <p>© 2025 Darya’s Touch. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const openItem = document.querySelector('.accordion-content.open');
+        if (openItem && openItem !== header.nextElementSibling) {
+          openItem.classList.remove('open');
+        }
+        header.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
