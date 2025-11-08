@@ -12,6 +12,7 @@
       color: #fff;
       overflow-x: hidden;
     }
+
     header {
       position: sticky;
       top: 0;
@@ -22,20 +23,24 @@
       padding: 1rem 2rem;
       z-index: 100;
     }
+
     header h1 {
       font-size: 1.5rem;
       color: #d4af37;
       margin: 0;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       margin: 0 1rem;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #d4af37;
     }
+
     .hero {
       background: url('https://cdn1.treatwell.net/images/view/v2.i1524154.w1080.h720.xC223EADA/') center/cover no-repeat;
       height: 300px;
@@ -43,6 +48,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .hero h2 {
       background: rgba(0, 0, 0, 0.6);
       padding: 1rem 2rem;
@@ -51,37 +57,50 @@
       font-size: 2.5rem;
       animation: fadeIn 1.5s ease-in-out;
     }
+
     .accordion {
       width: 90%;
       max-width: 900px;
       margin: 3rem auto;
       animation: fadeIn 1s ease-in-out;
     }
+
     .accordion-item {
       background: #1a1a1a;
       border-radius: 10px;
       margin-bottom: 1rem;
       overflow: hidden;
-      transition: all 0.3s ease;
     }
+
     .accordion-header {
       background: #111;
       color: #d4af37;
       padding: 1rem;
       cursor: pointer;
       font-weight: bold;
+      border: none;
+      width: 100%;
+      text-align: left;
+      outline: none;
+      transition: background 0.3s;
     }
+
+    .accordion-header:hover, .accordion-header:focus {
+      background: #222;
+    }
+
     .accordion-content {
-      max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease;
+      height: 0;
+      transition: height 0.4s ease;
       background: #181818;
       padding: 0 1rem;
     }
+
     .accordion-content.open {
-      max-height: 2000px;
       padding: 1rem;
     }
+
     .service-item {
       display: flex;
       justify-content: space-between;
@@ -89,9 +108,15 @@
       padding: 0.5rem 0;
       border-bottom: 1px solid #333;
     }
+
     .service-item:last-child {
       border-bottom: none;
     }
+
+    .service-item span:last-child a.book-btn {
+      margin-left: 10px;
+    }
+
     .book-btn {
       background: #d4af37;
       border: none;
@@ -102,9 +127,11 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     .book-btn:hover {
       background: #b8962e;
     }
+
     footer {
       background: #000;
       color: #aaa;
@@ -112,9 +139,23 @@
       padding: 2rem 1rem;
       margin-top: 3rem;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .accordion {
+        width: 95%;
+      }
+      .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .service-item span:last-child {
+        margin-top: 5px;
+      }
     }
   </style>
 </head>
@@ -137,7 +178,7 @@
 
     <!-- Patch Test -->
     <div class="accordion-item">
-      <div class="accordion-header">Patch Test</div>
+      <button class="accordion-header" aria-expanded="false">Patch Test</button>
       <div class="accordion-content">
         <div class="service-item"><span>Patch Test (5 mins)</span><span>£1.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
       </div>
@@ -145,49 +186,50 @@
 
     <!-- Sunbed -->
     <div class="accordion-item">
-      <div class="accordion-header">Sunbed</div>
+      <button class="accordion-header" aria-expanded="false">Sunbed</button>
       <div class="accordion-content">
         <div class="service-item"><span>Sunbeds (5 mins - 35 mins)</span><span>from £3.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
       </div>
     </div>
 
-    <!-- Hair and Make Up Packages -->
+    <!-- Hair & Make Up Packages -->
     <div class="accordion-item">
-      <div class="accordion-header">Hair and Make Up Packages</div>
+      <button class="accordion-header" aria-expanded="false">Hair & Make Up Packages</button>
       <div class="accordion-content">
-        <div class="service-item"><span>Bridal Package Consultation (30 mins)</span><span>£1.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Prom Package Consultation (30 mins)</span><span>£1.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Bridal Package Consultation (30 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Prom Package Consultation (30 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
     <!-- Ladies Haircuts & Hairdressing -->
     <div class="accordion-item">
-      <div class="accordion-header">Ladies - Haircuts & Hairdressing</div>
+      <button class="accordion-header" aria-expanded="false">Ladies - Haircuts & Hairdressing</button>
       <div class="accordion-content">
-        <div class="service-item"><span>Ladies - Wash, Haircut & Blow Dry (25 mins - 30 mins)</span><span>from £40.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Dry Cut (20 mins - 30 mins)</span><span>from £28.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Wash & Blow Dry (25 mins - 35 mins)</span><span>from £25.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Wash, Blow Dry & Curl (45 mins - 1 hr 15 mins)</span><span>from £35.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Full Olaplex Treatment & Blow Dry (45 mins - 1 hr)</span><span>from £55.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Hair Up (45 mins - 1 hr)</span><span>from £35.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Hair Extension Consultation (20 mins)</span><span>£1.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Keratin Treatment Free Consultation (20 mins)</span><span>£1.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Wash, Haircut & Blow Dry (25-30 mins)</span><span>from £40.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Dry Cut (20-30 mins)</span><span>from £28.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Wash & Blow Dry (25-35 mins)</span><span>from £25.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Wash, Blow Dry & Curl (45-75 mins)</span><span>from £35.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Full Olaplex Treatment & Blow Dry (45-60 mins)</span><span>from £55.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Hair Up (45-60 mins)</span><span>from £35.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Hair Extension Consultation (20 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Keratin Treatment Free Consultation (20 mins)</span><span>£1.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
-    <!-- Ladies Hair Colouring -->
+    <!-- Ladies Hair Colouring & Highlights -->
     <div class="accordion-item">
-      <div class="accordion-header">Ladies - Hair Colouring & Highlights</div>
+      <button class="accordion-header" aria-expanded="false">Ladies - Hair Colouring & Highlights</button>
       <div class="accordion-content">
-        <div class="service-item"><span>Color Correction Free Consultation (30 mins)</span><span>from £0.90 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Root Colour (1-2 Inches) with Haircut & Blow Dry (2 hrs)</span><span>from £60.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Full Head Colour with Haircut & Blow Dry (2 hrs 15 mins)</span><span>from £67.50 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Full Head Highlights (2 hrs 15 mins - 2 hrs 30 mins)</span><span>from £180.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
-        <div class="service-item"><span>Ladies - Balayage with Haircut & Blow Dry (2 hrs 45 mins)</span><span>from £200.00 <a class="book-btn" href="https://www.treatwell.co.uk/place/daryas-touch-unisex-hair-beauty-salon-legend-quays/">Book</a></span></div>
+        <div class="service-item"><span>Color Correction Free Consultation (30 mins)</span><span>from £0.90 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Root Colour (1-2 inches) with Haircut & Blow Dry (2 hrs)</span><span>from £60.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Full Head Colour with Haircut & Blow Dry (2 hrs 15 mins)</span><span>from £67.50 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Full Head Highlights (2 hrs 15-30 mins)</span><span>from £180.00 <a class="book-btn" href="#">Book</a></span></div>
+        <div class="service-item"><span>Balayage with Haircut & Blow Dry (2 hrs 45 mins)</span><span>from £200.00 <a class="book-btn" href="#">Book</a></span></div>
       </div>
     </div>
 
-    <!-- More categories omitted for brevity -->
+    <!-- Add more categories here as needed -->
+
   </section>
 
   <footer id="contact">
@@ -199,13 +241,36 @@
 
   <script>
     const headers = document.querySelectorAll('.accordion-header');
+
     headers.forEach(header => {
       header.addEventListener('click', () => {
-        const openItem = document.querySelector('.accordion-content.open');
-        if (openItem && openItem !== header.nextElementSibling) {
-          openItem.classList.remove('open');
+        const content = header.nextElementSibling;
+
+        const openContent = document.querySelector('.accordion-content.open');
+        if (openContent && openContent !== content) {
+          openContent.style.height = 0;
+          openContent.classList.remove('open');
+          openContent.previousElementSibling.setAttribute('aria-expanded', 'false');
         }
-        header.nextElementSibling.classList.toggle('open');
+
+        if (content.classList.contains('open')) {
+          content.style.height = 0;
+          content.classList.remove('open');
+          header.setAttribute('aria-expanded', 'false');
+        } else {
+          content.classList.add('open');
+          const height = content.scrollHeight + "px";
+          content.style.height = height;
+          header.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Keyboard accessibility
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          header.click();
+        }
       });
     });
   </script>
